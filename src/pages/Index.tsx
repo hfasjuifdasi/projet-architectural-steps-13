@@ -414,19 +414,27 @@ const Index = () => {
           tasks: [
             {
               id: "6.1.1",
-              titleFr: "Permis de construire ou déclaration préalable",
-              titleEn: "Building permit or prior declaration",
+              titleFr: "Normes de sécurité",
+              titleEn: "Safety standards",
               isSelected: false,
-              descriptionFr: "L'architecte doit préparer et déposer le dossier de permis de construire ou de déclaration préalable auprès de la mairie. Ce dossier doit inclure les plans, les calculs structurels, et les justificatifs techniques.",
-              descriptionEn: "The architect must prepare and submit the building permit application or prior declaration to the city hall."
+              descriptionFr: "L'architecte doit s'assurer que les travaux respectent les normes de sécurité incendie, d'isolation acoustique et thermique.",
+              descriptionEn: "The architect must ensure that the work complies with fire safety standards, acoustic and thermal insulation."
             },
             {
               id: "6.1.2",
-              titleFr: "Autorisation de la copropriété",
-              titleEn: "Co-ownership authorization",
+              titleFr: "Accessibilité",
+              titleEn: "Accessibility",
               isSelected: false,
-              descriptionFr: "Si le mur est commun ou mitoyen, l'architecte doit obtenir l'accord de la copropriété en présentant les travaux lors d'une assemblée générale.",
-              descriptionEn: "If the wall is shared, the architect must obtain co-ownership approval by presenting the work at a general assembly."
+              descriptionFr: "Si le bâtiment est soumis à des règles d'accessibilité, l'architecte doit veiller à ce que l'ouverture respecte ces règles (largeur de passage, hauteur de seuil, etc.).",
+              descriptionEn: "If the building is subject to accessibility rules, the architect must ensure that the opening complies with these rules (passage width, threshold height, etc.)."
+            },
+            {
+              id: "6.1.3",
+              titleFr: "Visites de contrôle",
+              titleEn: "Control visits",
+              isSelected: false,
+              descriptionFr: "L'architecte doit effectuer des visites de contrôle pour vérifier que les normes sont respectées. Nombre de visites [Nbr] (integer>=0 defined by user)",
+              descriptionEn: "The architect must perform control visits to verify compliance with standards. Number of visits [Nbr] (integer>=0 defined by user)"
             }
           ]
         },
@@ -438,19 +446,11 @@ const Index = () => {
           tasks: [
             {
               id: "6.2.1",
-              titleFr: "Rapport de faisabilité",
-              titleEn: "Feasibility report",
+              titleFr: "Visites de contrôle",
+              titleEn: "Control visits",
               isSelected: false,
-              descriptionFr: "Le BET doit fournir un rapport détaillé sur la faisabilité technique de l'ouverture, en tenant compte des charges supportées par le mur et des solutions de renforcement possibles.",
-              descriptionEn: "The Technical Office must provide a detailed report on the technical feasibility of the opening."
-            },
-            {
-              id: "6.2.2",
-              titleFr: "Assurances",
-              titleEn: "Insurance",
-              isSelected: false,
-              descriptionFr: "Vérifier que le BET dispose des assurances professionnelles nécessaires (responsabilité civile décennale, etc.).",
-              descriptionEn: "Verify that the Technical Office has the necessary professional insurance."
+              descriptionFr: "Le BET peut effectuer des visites de contrôle pour vérifier que les renforcements structurels sont conformes aux normes. A la demande de l'Architecte / Client. Prix de la visite [250€/visite] (non compris dans ce devis / peut etre demandé ultérieurement)",
+              descriptionEn: "The Technical Office can perform control visits to verify that structural reinforcements comply with standards. At Architect/Client's request. Price: [250€/visit] (not included in quote / can be requested later)"
             }
           ]
         },
@@ -459,10 +459,16 @@ const Index = () => {
           titleFr: "Société de construction",
           titleEn: "Construction company",
           isSelected: false,
-          description: {
-            fr: "Aucune intervention n'est requise à ce stade.",
-            en: "No intervention is required at this stage."
-          }
+          tasks: [
+            {
+              id: "6.3.1",
+              titleFr: "Respect des normes",
+              titleEn: "Compliance with standards",
+              isSelected: false,
+              descriptionFr: "La société de construction doit s'assurer que les travaux sont réalisés conformément aux normes de sécurité et d'accessibilité.",
+              descriptionEn: "The construction company must ensure that the work is carried out in accordance with safety and accessibility standards."
+            }
+          ]
         }
       ]
     },
@@ -481,19 +487,19 @@ const Index = () => {
           tasks: [
             {
               id: "7.1.1",
-              titleFr: "Permis de construire ou déclaration préalable",
-              titleEn: "Building permit or prior declaration",
+              titleFr: "Dépôt des documents",
+              titleEn: "Document submission",
               isSelected: false,
-              descriptionFr: "L'architecte doit préparer et déposer le dossier de permis de construire ou de déclaration préalable auprès de la mairie. Ce dossier doit inclure les plans, les calculs structurels, et les justificatifs techniques.",
-              descriptionEn: "The architect must prepare and submit the building permit application or prior declaration to the city hall."
+              descriptionFr: "Une fois les travaux terminés, l'architecte doit déposer les documents attestant de la conformité des travaux (attestation de conformité, rapport de contrôle technique, etc.) auprès des autorités compétentes.",
+              descriptionEn: "Once the work is completed, the architect must submit documents certifying work compliance (compliance certificate, technical control report, etc.) to the competent authorities."
             },
             {
               id: "7.1.2",
-              titleFr: "Autorisation de la copropriété",
-              titleEn: "Co-ownership authorization",
+              titleFr: "Réception des travaux",
+              titleEn: "Work acceptance",
               isSelected: false,
-              descriptionFr: "Si le mur est commun ou mitoyen, l'architecte doit obtenir l'accord de la copropriété en présentant les travaux lors d'une assemblée générale.",
-              descriptionEn: "If the wall is shared, the architect must obtain co-ownership approval by presenting the work at a general assembly."
+              descriptionFr: "L'architecte doit organiser une réception des travaux avec les parties prenantes (copropriétaires, maître d'ouvrage, etc.) pour valider la conformité des travaux.",
+              descriptionEn: "The architect must organize a work acceptance meeting with stakeholders (co-owners, project owner, etc.) to validate work compliance."
             }
           ]
         },
@@ -505,19 +511,11 @@ const Index = () => {
           tasks: [
             {
               id: "7.2.1",
-              titleFr: "Rapport de faisabilité",
-              titleEn: "Feasibility report",
+              titleFr: "Dossier des Ouvrages Exécutés (DOE)",
+              titleEn: "As-Built Documentation",
               isSelected: false,
-              descriptionFr: "Le BET doit fournir un rapport détaillé sur la faisabilité technique de l'ouverture, en tenant compte des charges supportées par le mur et des solutions de renforcement possibles.",
-              descriptionEn: "The Technical Office must provide a detailed report on the technical feasibility of the opening."
-            },
-            {
-              id: "7.2.2",
-              titleFr: "Assurances",
-              titleEn: "Insurance",
-              isSelected: false,
-              descriptionFr: "Vérifier que le BET dispose des assurances professionnelles nécessaires (responsabilité civile décennale, etc.).",
-              descriptionEn: "Verify that the Technical Office has the necessary professional insurance."
+              descriptionFr: "Le BET doit fournir le DOE, qui inclut les plans d'exécution, les calculs structurels, et les rapports de contrôle technique.",
+              descriptionEn: "The Technical Office must provide the as-built documentation, including execution plans, structural calculations, and technical control reports."
             }
           ]
         },
@@ -526,13 +524,19 @@ const Index = () => {
           titleFr: "Société de construction",
           titleEn: "Construction company",
           isSelected: false,
-          description: {
-            fr: "Aucune intervention n'est requise à ce stade.",
-            en: "No intervention is required at this stage."
-          }
+          tasks: [
+            {
+              id: "7.3.1",
+              titleFr: "Garanties",
+              titleEn: "Warranties",
+              isSelected: false,
+              descriptionFr: "La société de construction doit fournir les garanties légales (garantie décennale, garantie de parfait achèvement, etc.).",
+              descriptionEn: "The construction company must provide legal warranties (ten-year warranty, completion warranty, etc.)."
+            }
+          ]
         }
       ]
-    },
+    }
   ]);
 
   const toggleLanguage = () => setIsEnglish(!isEnglish);
