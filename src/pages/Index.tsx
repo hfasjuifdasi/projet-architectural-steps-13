@@ -191,19 +191,19 @@ const Index = () => {
           tasks: [
             {
               id: "3.1.1",
-              titleFr: "Analyse des plans existants",
-              titleEn: "Analysis of existing plans",
+              titleFr: "Plans architecturaux d'exécution",
+              titleEn: "Architectural execution plans",
               isSelected: false,
-              descriptionFr: "Vérifier les plans de l'immeuble pour identifier la structure du mur porteur et son rôle dans la stabilité du bâtiment.",
-              descriptionEn: "Check building plans to identify the load-bearing wall structure and its role in building stability."
+              descriptionFr: "L'architecte doit produire des plans détaillés de l'ouverture, incluant les dimensions, les matériaux, et les finitions.",
+              descriptionEn: "The architect must produce detailed plans of the opening, including dimensions, materials, and finishes."
             },
             {
               id: "3.1.2",
-              titleFr: "Consultation des règles d'urbanisme",
-              titleEn: "Consultation of urban planning rules",
+              titleFr: "Coordination avec le BET",
+              titleEn: "Coordination with Technical Office",
               isSelected: false,
-              descriptionFr: "S'assurer que les travaux envisagés sont conformes au PLU (Plan Local d'Urbanisme) ou au POS (Plan d'Occupation des Sols).",
-              descriptionEn: "Ensure that the planned work complies with local urban planning regulations."
+              descriptionFr: "L'architecte doit s'assurer que les plans architecturaux sont en adéquation avec les calculs structurels fournis par le BET.",
+              descriptionEn: "The architect must ensure that the architectural plans align with the structural calculations provided by the Technical Office."
             }
           ]
         },
@@ -215,19 +215,27 @@ const Index = () => {
           tasks: [
             {
               id: "3.2.1",
-              titleFr: "Rapport de faisabilité",
-              titleEn: "Feasibility report",
+              titleFr: "Calculs structurels",
+              titleEn: "Structural calculations",
               isSelected: false,
-              descriptionFr: "Le BET doit fournir un rapport détaillé sur la faisabilité technique de l'ouverture, en tenant compte des charges supportées par le mur et des solutions de renforcement possibles.",
-              descriptionEn: "The Technical Office must provide a detailed report on the technical feasibility of the opening."
+              descriptionFr: "Le BET doit réaliser des calculs précis pour déterminer les renforcements nécessaires (poutres, poteaux, etc.) afin de maintenir la stabilité du bâtiment.",
+              descriptionEn: "The Technical Office must perform precise calculations to determine the necessary reinforcements to maintain building stability."
             },
             {
               id: "3.2.2",
-              titleFr: "Assurances",
-              titleEn: "Insurance",
+              titleFr: "Plans d'exécution",
+              titleEn: "Execution plans",
               isSelected: false,
-              descriptionFr: "Vérifier que le BET dispose des assurances professionnelles nécessaires (responsabilité civile décennale, etc.).",
-              descriptionEn: "Verify that the Technical Office has the necessary professional insurance."
+              descriptionFr: "Le BET doit fournir des plans techniques détaillés pour la mise en œuvre des renforcements structurels.",
+              descriptionEn: "The Technical Office must provide detailed technical plans for implementing structural reinforcements."
+            },
+            {
+              id: "3.2.3",
+              titleFr: "Méthode de renforcement",
+              titleEn: "Reinforcement method",
+              isSelected: false,
+              descriptionFr: "Le BET doit proposer une méthode de renforcement adaptée (poutrelles, IPN, etc.) et justifier ses choix techniques.",
+              descriptionEn: "The Technical Office must propose an appropriate reinforcement method and justify their technical choices."
             }
           ]
         },
@@ -236,10 +244,24 @@ const Index = () => {
           titleFr: "Société de construction",
           titleEn: "Construction company",
           isSelected: false,
-          description: {
-            fr: "Aucune intervention n'est requise à ce stade.",
-            en: "No intervention is required at this stage."
-          }
+          tasks: [
+            {
+              id: "3.3.1",
+              titleFr: "Devis",
+              titleEn: "Quote",
+              isSelected: false,
+              descriptionFr: "La société de construction doit fournir un devis détaillé pour les travaux de renforcement et de réalisation de l'ouverture.",
+              descriptionEn: "The construction company must provide a detailed quote for reinforcement work and opening creation."
+            },
+            {
+              id: "3.3.2",
+              titleFr: "Assurances",
+              titleEn: "Insurance",
+              isSelected: false,
+              descriptionFr: "La société de construction doit fournir les attestations d'assurance nécessaires (assurance décennale, assurance responsabilité civile, etc.).",
+              descriptionEn: "The construction company must provide necessary insurance certificates."
+            }
+          ]
         }
       ]
     },
@@ -258,19 +280,27 @@ const Index = () => {
           tasks: [
             {
               id: "4.1.1",
-              titleFr: "Permis de construire ou déclaration préalable",
-              titleEn: "Building permit or prior declaration",
+              titleFr: "Information des copropriétaires",
+              titleEn: "Co-owners information",
               isSelected: false,
-              descriptionFr: "L'architecte doit préparer et déposer le dossier de permis de construire ou de déclaration préalable auprès de la mairie. Ce dossier doit inclure les plans, les calculs structurels, et les justificatifs techniques.",
-              descriptionEn: "The architect must prepare and submit the building permit application or prior declaration to the city hall."
+              descriptionFr: "L'architecte doit organiser une réunion d'information pour expliquer les travaux, leurs impacts, et les bénéfices attendus.",
+              descriptionEn: "The architect must organize an information meeting to explain the work, its impacts, and expected benefits."
             },
             {
               id: "4.1.2",
-              titleFr: "Autorisation de la copropriété",
-              titleEn: "Co-ownership authorization",
+              titleFr: "Vote en assemblée générale",
+              titleEn: "General assembly vote",
               isSelected: false,
-              descriptionFr: "Si le mur est commun ou mitoyen, l'architecte doit obtenir l'accord de la copropriété en présentant les travaux lors d'une assemblée générale.",
-              descriptionEn: "If the wall is shared, the architect must obtain co-ownership approval by presenting the work at a general assembly."
+              descriptionFr: "L'architecte doit préparer une résolution pour soumettre les travaux au vote des copropriétaires. Une majorité spécifique peut être requise selon le règlement de copropriété.",
+              descriptionEn: "The architect must prepare a resolution to submit the work to the co-owners' vote."
+            },
+            {
+              id: "4.1.3",
+              titleFr: "Convention de jouissance",
+              titleEn: "Usage agreement",
+              isSelected: false,
+              descriptionFr: "Si l'ouverture modifie les droits de propriété ou crée un nouvel usage, une convention de jouissance doit être rédigée et signée par les parties concernées.",
+              descriptionEn: "If the opening modifies property rights or creates new usage, an agreement must be drafted and signed."
             }
           ]
         },
@@ -279,24 +309,10 @@ const Index = () => {
           titleFr: "BET Structure",
           titleEn: "Technical Design Office",
           isSelected: false,
-          tasks: [
-            {
-              id: "4.2.1",
-              titleFr: "Rapport de faisabilité",
-              titleEn: "Feasibility report",
-              isSelected: false,
-              descriptionFr: "Le BET doit fournir un rapport détaillé sur la faisabilité technique de l'ouverture, en tenant compte des charges supportées par le mur et des solutions de renforcement possibles.",
-              descriptionEn: "The Technical Office must provide a detailed report on the technical feasibility of the opening."
-            },
-            {
-              id: "4.2.2",
-              titleFr: "Assurances",
-              titleEn: "Insurance",
-              isSelected: false,
-              descriptionFr: "Vérifier que le BET dispose des assurances professionnelles nécessaires (responsabilité civile décennale, etc.).",
-              descriptionEn: "Verify that the Technical Office has the necessary professional insurance."
-            }
-          ]
+          description: {
+            fr: "Le BET n'intervient pas dans cette étape.",
+            en: "The Technical Office is not involved in this step."
+          }
         },
         {
           id: "4.3",
@@ -325,19 +341,27 @@ const Index = () => {
           tasks: [
             {
               id: "5.1.1",
-              titleFr: "Permis de construire ou déclaration préalable",
-              titleEn: "Building permit or prior declaration",
+              titleFr: "Entrepreneurs et artisans",
+              titleEn: "Contractors and craftsmen",
               isSelected: false,
-              descriptionFr: "L'architecte doit préparer et déposer le dossier de permis de construire ou de déclaration préalable auprès de la mairie. Ce dossier doit inclure les plans, les calculs structurels, et les justificatifs techniques.",
-              descriptionEn: "The architect must prepare and submit the building permit application or prior declaration to the city hall."
+              descriptionFr: "L'architecte doit sélectionner et coordonner les entreprises et artisans qui interviendront sur le chantier (maçonnerie, charpente, électricité, etc.).",
+              descriptionEn: "The architect must select and coordinate the companies and craftsmen who will work on the site."
             },
             {
               id: "5.1.2",
-              titleFr: "Autorisation de la copropriété",
-              titleEn: "Co-ownership authorization",
+              titleFr: "Contrôle technique",
+              titleEn: "Technical control",
               isSelected: false,
-              descriptionFr: "Si le mur est commun ou mitoyen, l'architecte doit obtenir l'accord de la copropriété en présentant les travaux lors d'une assemblée générale.",
-              descriptionEn: "If the wall is shared, the architect must obtain co-ownership approval by presenting the work at a general assembly."
+              descriptionFr: "L'architecte doit s'assurer qu'un contrôle technique est effectué pour vérifier la conformité des travaux aux normes en vigueur.",
+              descriptionEn: "The architect must ensure that technical control is carried out to verify compliance with current standards."
+            },
+            {
+              id: "5.1.3",
+              titleFr: "Suivi de chantier",
+              titleEn: "Site monitoring",
+              isSelected: false,
+              descriptionFr: "L'architecte doit effectuer des visites régulières sur le chantier pour s'assurer que les travaux sont réalisés conformément aux plans et aux normes.",
+              descriptionEn: "The architect must make regular site visits to ensure work is carried out in accordance with plans and standards."
             }
           ]
         },
@@ -349,19 +373,11 @@ const Index = () => {
           tasks: [
             {
               id: "5.2.1",
-              titleFr: "Rapport de faisabilité",
-              titleEn: "Feasibility report",
+              titleFr: "Visite de contrôle",
+              titleEn: "Control visit",
               isSelected: false,
-              descriptionFr: "Le BET doit fournir un rapport détaillé sur la faisabilité technique de l'ouverture, en tenant compte des charges supportées par le mur et des solutions de renforcement possibles.",
-              descriptionEn: "The Technical Office must provide a detailed report on the technical feasibility of the opening."
-            },
-            {
-              id: "5.2.2",
-              titleFr: "Assurances",
-              titleEn: "Insurance",
-              isSelected: false,
-              descriptionFr: "Vérifier que le BET dispose des assurances professionnelles nécessaires (responsabilité civile décennale, etc.).",
-              descriptionEn: "Verify that the Technical Office has the necessary professional insurance."
+              descriptionFr: "Le BET peut effectuer des visites de contrôle pour vérifier la mise en œuvre des renforcements structurels. A la demande de l'Architecte / Client. Prix de la visite [250€/visite] (non compris dans ce devis)",
+              descriptionEn: "The Technical Office can perform control visits to verify structural reinforcement implementation. At Architect/Client's request. Price: [250€/visit] (not included in quote)"
             }
           ]
         },
@@ -370,10 +386,16 @@ const Index = () => {
           titleFr: "Société de construction",
           titleEn: "Construction company",
           isSelected: false,
-          description: {
-            fr: "Aucune intervention n'est requise à ce stade.",
-            en: "No intervention is required at this stage."
-          }
+          tasks: [
+            {
+              id: "5.3.1",
+              titleFr: "Mise en œuvre des travaux",
+              titleEn: "Work implementation",
+              isSelected: false,
+              descriptionFr: "La société de construction doit réaliser les travaux conformément aux plans et aux spécifications techniques fournis par l'architecte et le BET.",
+              descriptionEn: "The construction company must carry out the work in accordance with plans and technical specifications provided by the architect and Technical Office."
+            }
+          ]
         }
       ]
     },
@@ -602,7 +624,6 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-white p-6 md:p-12 animate-fade-in">
       <div className="max-w-4xl mx-auto">
-        {/* Language Toggle */}
         <button
           onClick={toggleLanguage}
           className="mb-8 px-4 py-2 text-sm font-medium text-secondary-DEFAULT hover:text-primary transition-colors"
@@ -610,21 +631,18 @@ const Index = () => {
           {isEnglish ? "FR" : "EN"}
         </button>
 
-        {/* Title */}
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
           {isEnglish
             ? "Steps to progress on the load-bearing wall opening project"
             : "Étapes pour avancer sur le projet d'une OMP"}
         </h1>
 
-        {/* Introduction */}
         <p className="text-lg text-gray-700 mb-12">
           {isEnglish
             ? "To create an opening in a load-bearing wall while respecting best practices, it is essential to follow a rigorous and detailed approach. Here are the project steps:"
             : "Pour réaliser une ouverture dans un mur porteur tout en respectant les règles de l'art, il est essentiel de suivre une démarche rigoureuse et détaillée. Voici les étape du projet :"}
         </p>
 
-        {/* Steps */}
         <div className="space-y-4 mb-12">
           {steps.map((step) => (
             <div
@@ -735,7 +753,6 @@ const Index = () => {
           ))}
         </div>
 
-        {/* Conclusion */}
         <div className="bg-accent rounded-lg p-6 mb-12">
           <p className="text-gray-700">
             {isEnglish
@@ -744,7 +761,6 @@ const Index = () => {
           </p>
         </div>
 
-        {/* Action Buttons */}
         <div className="flex justify-between items-center">
           <button className="flex items-center space-x-2 px-6 py-3 text-secondary-DEFAULT hover:text-primary transition-colors">
             <ArrowLeft className="h-5 w-5" />
