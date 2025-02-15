@@ -543,9 +543,10 @@ const Index = () => {
 
   const toggleStep = (id: number) => {
     setSteps(
-      steps.map((step) =>
-        step.id === id ? { ...step, isExpanded: !step.isExpanded } : step
-      )
+      steps.map((step) => ({
+        ...step,
+        isExpanded: step.id === id ? !step.isExpanded : false
+      }))
     );
   };
 
