@@ -34,8 +34,8 @@ const Index = () => {
   const [steps, setSteps] = useState<Step[]>([
     {
       id: 1,
-      titleFr: "1-Vérification du statut du mur porteur",
-      titleEn: "1-Load-bearing wall status verification",
+      titleFr: "Vérification du statut du mur porteur",
+      titleEn: "Load-bearing wall status verification",
       isSelected: false,
       isExpanded: false,
       subTasks: [
@@ -125,8 +125,8 @@ const Index = () => {
     },
     {
       id: 2,
-      titleFr: "2-Demandes administratives",
-      titleEn: "2-Administrative requests",
+      titleFr: "Demandes administratives",
+      titleEn: "Administrative requests",
       isSelected: false,
       isExpanded: false,
       subTasks: [
@@ -178,8 +178,8 @@ const Index = () => {
     },
     {
       id: 3,
-      titleFr: "3-Étude technique",
-      titleEn: "3-Technical study",
+      titleFr: "Étude technique",
+      titleEn: "Technical study",
       isSelected: false,
       isExpanded: false,
       subTasks: [
@@ -267,8 +267,8 @@ const Index = () => {
     },
     {
       id: 4,
-      titleFr: "4-Démarches en copropriété",
-      titleEn: "4-Co-ownership procedures",
+      titleFr: "Démarches en copropriété",
+      titleEn: "Co-ownership procedures",
       isSelected: false,
       isExpanded: false,
       subTasks: [
@@ -328,8 +328,8 @@ const Index = () => {
     },
     {
       id: 5,
-      titleFr: "5-Coordination avec les professionnels",
-      titleEn: "5-Coordination with professionals",
+      titleFr: "Coordination avec les professionnels",
+      titleEn: "Coordination with professionals",
       isSelected: false,
       isExpanded: false,
       subTasks: [
@@ -401,8 +401,8 @@ const Index = () => {
     },
     {
       id: 7,
-      titleFr: "6-Suivi des travaux",
-      titleEn: "6-Work monitoring",
+      titleFr: "Suivi des travaux",
+      titleEn: "Work monitoring",
       isSelected: false,
       isExpanded: false,
       subTasks: [
