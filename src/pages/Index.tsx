@@ -571,8 +571,8 @@ const Index = () => {
 
         <p className="text-lg text-gray-700 mb-12">
           {isEnglish
-            ? "To create an opening in a load-bearing wall while respecting best practices, it is essential to follow a rigorous and detailed approach. Here are the project steps:"
-            : "Pour réaliser une ouverture dans un mur porteur tout en respectant les règles de l'art, il est essentiel de suivre une démarche rigoureuse et détaillée. Voici les étape du projet :"}
+            ? "To create an opening in a load-bearing wall, following a rigorous and detailed approach is essential. You can choose to focus on specific actions rather than the entire procedure, according to your needs. Select the actions you wish to carry out:"
+            : "Pour créer une ouverture dans un mur porteur en respectant les règles de l'art, une démarche rigoureuse et détaillée est essentielle. Vous pouvez choisir de vous concentrer sur certaines actions plutôt que sur l'ensemble de la procédure, selon vos besoins. Sélectionnez les actions que vous souhaitez réaliser :"}
         </p>
 
         <div className="space-y-4 mb-12">
@@ -689,7 +689,7 @@ const Index = () => {
           <p className="text-gray-700">
             {isEnglish
               ? "To create an opening in a load-bearing wall while respecting best practices, it is essential to follow a rigorous approach and coordinate the interventions of the architect, structural engineering firm, and construction company. Each step, from verifying the wall status to work completion, must be carefully planned and executed to ensure safety, compliance, and work quality. That being said, you can choose to focus on certain actions rather than the entire procedure if you wish."
-              : "Pour créer une ouverture dans un mur porteur en respectant les règles de l'art, il est essentiel de suivre une démarche rigoureuse et de bien coordonner les interventions de l'architecte, du BET Structure et de l'entreprise de construction. Chaque étape, de la vérification du statut du mur à la réception des travaux, doit être soigneusement planifiée et exécutée pour garantir la sécurité, la conformité et la qualité. Cela dit, vous pouvez choisir de vous concentrer sur certaines actions plutôt que sur l'ensemble de la procédure, si vous le souhaitez."}
+              : "Pour créer une ouverture dans un mur porteur en respectant les règles de l'art, une démarche rigoureuse et détaillée est essentielle. Vous pouvez choisir de vous concentrer sur certaines actions plutôt que sur l’ensemble de la procédure, selon vos besoins. Sélectionnez les actions que vous souhaitez réaliser :"}
           </p>
         </div>
 
