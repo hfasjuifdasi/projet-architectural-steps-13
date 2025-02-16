@@ -69,57 +69,57 @@ const Projects = () => {
           </div>
         </div>
 
-        <div ref={contentRef} className="bg-white p-8 rounded-lg shadow-lg">
-          <h1 className="text-3xl font-bold mb-8">
+        <div ref={contentRef} className="bg-white p-4 rounded-lg shadow-lg">
+          <h1 className="text-2xl font-bold mb-4">
             {isEnglish ? "Project Details" : "Détails du projet"}
           </h1>
 
-          <div className="grid grid-cols-2 gap-6 mb-8">
+          <div className="grid grid-cols-2 gap-4 mb-4">
             <div>
-              <p className="font-semibold">{isEnglish ? "Client Name" : "Nom du client"}</p>
-              <p>{projectData.clientName}</p>
+              <p className="text-sm font-semibold">{isEnglish ? "Client Name" : "Nom du client"}</p>
+              <p className="text-sm">{projectData.clientName}</p>
             </div>
             <div>
-              <p className="font-semibold">{isEnglish ? "Address" : "Adresse"}</p>
-              <p>{projectData.address}</p>
+              <p className="text-sm font-semibold">{isEnglish ? "Address" : "Adresse"}</p>
+              <p className="text-sm">{projectData.address}</p>
             </div>
             <div>
-              <p className="font-semibold">{isEnglish ? "Submission Date" : "Date de soumission"}</p>
-              <p>{projectData.submissionDate}</p>
+              <p className="text-sm font-semibold">{isEnglish ? "Submission Date" : "Date de soumission"}</p>
+              <p className="text-sm">{projectData.submissionDate}</p>
             </div>
             <div>
-              <p className="font-semibold">{isEnglish ? "Estimated Price" : "Prix estimé"}</p>
-              <p>{projectData.price}</p>
+              <p className="text-sm font-semibold">{isEnglish ? "Estimated Price" : "Prix estimé"}</p>
+              <p className="text-sm">{projectData.price}</p>
             </div>
           </div>
 
-          <h2 className="text-2xl font-bold mb-6">
+          <h2 className="text-xl font-bold mb-3">
             {isEnglish ? "Selected Items" : "Éléments sélectionnés"}
           </h2>
 
-          <div className="space-y-4">
+          <div className="space-y-2">
             {selectedSteps
               .filter(step => step.isSelected)
               .map((step) => (
-                <div key={step.id} className="border-l-4 border-primary pl-4">
-                  <h3 className="font-semibold">
+                <div key={step.id} className="border-l-2 border-primary pl-2">
+                  <h3 className="text-sm font-semibold">
                     {isEnglish ? step.titleEn : step.titleFr}
                   </h3>
                   {step.subTasks && (
-                    <ul className="ml-4 mt-2 space-y-1">
+                    <ul className="ml-2">
                       {step.subTasks
                         .filter((subTask: any) => subTask.isSelected)
                         .map((subTask: any) => (
                           <li key={subTask.id}>
-                            <p className="font-medium">
+                            <p className="text-sm font-medium">
                               {isEnglish ? subTask.titleEn : subTask.titleFr}
                             </p>
                             {subTask.tasks && (
-                              <ul className="ml-4">
+                              <ul className="ml-2">
                                 {subTask.tasks
                                   .filter((task: any) => task.isSelected)
                                   .map((task: any) => (
-                                    <li key={task.id} className="text-sm text-gray-600">
+                                    <li key={task.id} className="text-xs text-gray-600">
                                       {isEnglish ? task.titleEn : task.titleFr}
                                     </li>
                                   ))}
