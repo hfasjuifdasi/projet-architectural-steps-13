@@ -70,30 +70,30 @@ const Projects = () => {
         </div>
 
         <div ref={contentRef} className="bg-white p-4 rounded-lg shadow-lg">
-          <h1 className="text-2xl font-bold mb-4">
+          <h1 className="text-xl font-bold mb-2">
             {isEnglish ? "Project Details" : "Détails du projet"}
           </h1>
 
-          <div className="grid grid-cols-2 gap-4 mb-4">
+          <div className="grid grid-cols-2 gap-2 mb-3">
             <div>
-              <p className="text-sm font-semibold">{isEnglish ? "Client Name" : "Nom du client"}</p>
+              <p className="text-xs font-semibold text-gray-600">{isEnglish ? "Client Name" : "Nom du client"}</p>
               <p className="text-sm">{projectData.clientName}</p>
             </div>
             <div>
-              <p className="text-sm font-semibold">{isEnglish ? "Address" : "Adresse"}</p>
+              <p className="text-xs font-semibold text-gray-600">{isEnglish ? "Address" : "Adresse"}</p>
               <p className="text-sm">{projectData.address}</p>
             </div>
             <div>
-              <p className="text-sm font-semibold">{isEnglish ? "Submission Date" : "Date de soumission"}</p>
+              <p className="text-xs font-semibold text-gray-600">{isEnglish ? "Submission Date" : "Date de soumission"}</p>
               <p className="text-sm">{projectData.submissionDate}</p>
             </div>
             <div>
-              <p className="text-sm font-semibold">{isEnglish ? "Estimated Price" : "Prix estimé"}</p>
+              <p className="text-xs font-semibold text-gray-600">{isEnglish ? "Estimated Price" : "Prix estimé"}</p>
               <p className="text-sm">{projectData.price}</p>
             </div>
           </div>
 
-          <h2 className="text-xl font-bold mb-3">
+          <h2 className="text-lg font-bold mb-2">
             {isEnglish ? "Selected Items" : "Éléments sélectionnés"}
           </h2>
 
