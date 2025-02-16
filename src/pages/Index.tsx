@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { ArrowLeft, Send, CheckSquare, Square, ChevronDown, ChevronUp } from "lucide-react";
 
@@ -49,6 +50,7 @@ const Index = () => {
               id: "1.1.1",
               titleFr: "Visite de compréhension des demandes",
               titleEn: "Visit for understanding requirements",
+              isSelected: false,
               descriptionFr: "L'architecte doit effectuer une visite sur site pour comprendre les besoins du client et évaluer les contraintes techniques et réglementaires.",
               descriptionEn: "The architect must conduct a site visit to understand the client's needs and evaluate technical and regulatory constraints."
             },
@@ -56,6 +58,7 @@ const Index = () => {
               id: "1.1.2",
               titleFr: "Analyse des plans existants",
               titleEn: "Analysis of existing plans",
+              isSelected: false,
               descriptionFr: "Vérifier les plans de l'immeuble pour identifier la structure du mur porteur et son rôle dans la stabilité du bâtiment.",
               descriptionEn: "Check building plans to identify the load-bearing wall structure and its role in building stability."
             },
@@ -63,6 +66,7 @@ const Index = () => {
               id: "1.1.3",
               titleFr: "Consultation des règles d'urbanisme",
               titleEn: "Consultation of urban planning rules",
+              isSelected: false,
               descriptionFr: "S'assurer que les travaux envisagés sont conformes au PLU (Plan Local d'Urbanisme) ou au POS (Plan d'Occupation des Sols).",
               descriptionEn: "Ensure that the planned work complies with local urban planning regulations."
             },
@@ -70,6 +74,7 @@ const Index = () => {
               id: "1.1.4",
               titleFr: "Devis Architecte pour la réalisation",
               titleEn: "Architect's quote for implementation",
+              isSelected: false,
               descriptionFr: "Devis Architecte pour la réalisation",
               descriptionEn: "Architect's quote for implementation"
             }
@@ -85,6 +90,7 @@ const Index = () => {
               id: "1.2.1",
               titleFr: "Rapport de faisabilité",
               titleEn: "Feasibility report",
+              isSelected: false,
               descriptionFr: "Le BET doit fournir un rapport détaillé sur la faisabilité technique de l'ouverture, en tenant compte des charges supportées par le mur et des solutions de renforcement possibles.",
               descriptionEn: "The Technical Office must provide a detailed report on the technical feasibility of the opening."
             },
@@ -92,6 +98,7 @@ const Index = () => {
               id: "1.2.2",
               titleFr: "Assurances",
               titleEn: "Insurance",
+              isSelected: false,
               descriptionFr: "Vérifier que le BET dispose des assurances professionnelles nécessaires (responsabilité civile décennale, etc.).",
               descriptionEn: "Verify that the Technical Office has the necessary professional insurance."
             },
@@ -99,6 +106,7 @@ const Index = () => {
               id: "1.2.3",
               titleFr: "Visite technique",
               titleEn: "Technical visit",
+              isSelected: false,
               descriptionFr: "A la demande de l'Architecte Si nécessaire, une visite peut être requise pour des analyses techniques (sondages, carottages, etc.). Prix de la visite [250€/visite] (non compris dans ce devis)",
               descriptionEn: "If requested by the Architect, a visit may be required for technical analysis. Price: [250€/visit] (not included in this quote)"
             }
