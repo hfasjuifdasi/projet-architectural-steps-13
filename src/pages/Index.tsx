@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { ArrowLeft, Send, CheckSquare, Square, ChevronDown, ChevronUp } from "lucide-react";
 
@@ -194,6 +193,7 @@ const Index = () => {
               id: "3.1.1",
               titleFr: "Plans architecturaux d'exécution",
               titleEn: "Architectural execution plans",
+              isSelected: false,
               descriptionFr: "L'architecte doit produire des plans détaillés de l'ouverture, incluant les dimensions, les matériaux, et les finitions.",
               descriptionEn: "The architect must produce detailed plans of the opening, including dimensions, materials, and finishes."
             },
@@ -201,6 +201,7 @@ const Index = () => {
               id: "3.1.2",
               titleFr: "Coordination avec le BET",
               titleEn: "Coordination with Technical Office",
+              isSelected: false,
               descriptionFr: "L'architecte doit s'assurer que les plans architecturaux sont en adéquation avec les calculs structurels fournis par le BET.",
               descriptionEn: "The architect must ensure that the architectural plans align with the structural calculations provided by the Technical Office."
             }
@@ -216,6 +217,7 @@ const Index = () => {
               id: "3.2.1",
               titleFr: "Calculs structurels",
               titleEn: "Structural calculations",
+              isSelected: false,
               descriptionFr: "Le BET doit réaliser des calculs précis pour déterminer les renforcements nécessaires (poutres, poteaux, etc.) afin de maintenir la stabilité du bâtiment.",
               descriptionEn: "The Technical Office must perform precise calculations to determine the necessary reinforcements to maintain building stability."
             },
@@ -223,6 +225,7 @@ const Index = () => {
               id: "3.2.2",
               titleFr: "Plans d'exécution",
               titleEn: "Execution plans",
+              isSelected: false,
               descriptionFr: "Le BET doit fournir des plans techniques détaillés pour la mise en œuvre des renforcements structurels.",
               descriptionEn: "The Technical Office must provide detailed technical plans for implementing structural reinforcements."
             },
@@ -230,6 +233,7 @@ const Index = () => {
               id: "3.2.3",
               titleFr: "Méthode de renforcement",
               titleEn: "Reinforcement method",
+              isSelected: false,
               descriptionFr: "Le BET doit proposer une méthode de renforcement adaptée (poutrelles, IPN, etc.) et justifier ses choix techniques.",
               descriptionEn: "The Technical Office must propose an appropriate reinforcement method and justify their technical choices."
             }
@@ -245,6 +249,7 @@ const Index = () => {
               id: "3.3.1",
               titleFr: "Devis",
               titleEn: "Quote",
+              isSelected: false,
               descriptionFr: "La société de construction doit fournir un devis détaillé pour les travaux de renforcement et de réalisation de l'ouverture.",
               descriptionEn: "The construction company must provide a detailed quote for reinforcement work and opening creation."
             },
@@ -252,6 +257,7 @@ const Index = () => {
               id: "3.3.2",
               titleFr: "Assurances",
               titleEn: "Insurance",
+              isSelected: false,
               descriptionFr: "La société de construction doit fournir les attestations d'assurance nécessaires (assurance décennale, assurance responsabilité civile, etc.).",
               descriptionEn: "The construction company must provide necessary insurance certificates."
             }
@@ -302,6 +308,7 @@ const Index = () => {
           id: "4.2",
           titleFr: "BET Structure",
           titleEn: "Technical Design Office",
+          isSelected: false,
           description: {
             fr: "Le BET n'intervient pas dans cette étape.",
             en: "The Technical Office is not involved in this step."
@@ -311,6 +318,7 @@ const Index = () => {
           id: "4.3",
           titleFr: "Société de construction",
           titleEn: "Construction company",
+          isSelected: false,
           description: {
             fr: "Aucune intervention n'est requise à ce stade.",
             en: "No intervention is required at this stage."
