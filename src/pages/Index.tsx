@@ -34,8 +34,8 @@ const Index = () => {
   const [steps, setSteps] = useState<Step[]>([
     {
       id: 1,
-      titleFr: "Vérification du statut du mur porteur",
-      titleEn: "Load-bearing wall status verification",
+      titleFr: "Étape 1 : Vérification du statut du mur porteur",
+      titleEn: "Step 1: Load-bearing wall status verification",
       isSelected: false,
       isExpanded: false,
       subTasks: [
@@ -125,8 +125,8 @@ const Index = () => {
     },
     {
       id: 2,
-      titleFr: "Demandes administratives",
-      titleEn: "Administrative requests",
+      titleFr: "Étape 2 : Demandes administratives",
+      titleEn: "Step 2: Administrative requests",
       isSelected: false,
       isExpanded: false,
       subTasks: [
@@ -178,8 +178,8 @@ const Index = () => {
     },
     {
       id: 3,
-      titleFr: "Étude technique",
-      titleEn: "Technical study",
+      titleFr: "Étape 3 : Étude technique",
+      titleEn: "Step 3: Technical study",
       isSelected: false,
       isExpanded: false,
       subTasks: [
@@ -267,8 +267,8 @@ const Index = () => {
     },
     {
       id: 4,
-      titleFr: "Démarches en copropriété",
-      titleEn: "Co-ownership procedures",
+      titleFr: "Étape 4 : Démarches en copropriété",
+      titleEn: "Step 4: Co-ownership procedures",
       isSelected: false,
       isExpanded: false,
       subTasks: [
@@ -328,8 +328,8 @@ const Index = () => {
     },
     {
       id: 5,
-      titleFr: "Coordination avec les professionnels",
-      titleEn: "Coordination with professionals",
+      titleFr: "Étape 5 : Coordination avec les professionnels",
+      titleEn: "Step 5: Coordination with professionals",
       isSelected: false,
       isExpanded: false,
       subTasks: [
@@ -401,8 +401,8 @@ const Index = () => {
     },
     {
       id: 7,
-      titleFr: "Suivi des travaux",
-      titleEn: "Work monitoring",
+      titleFr: "Étape 6 : Suivi des travaux",
+      titleEn: "Step 6: Work monitoring",
       isSelected: false,
       isExpanded: false,
       subTasks: [
