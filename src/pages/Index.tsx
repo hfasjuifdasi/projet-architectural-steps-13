@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ArrowLeft, Send, CheckSquare, Square, ChevronDown, ChevronUp } from "lucide-react";
+import RecapWizard from "../components/RecapWizard";
 
 interface SubTask {
   id: string;
@@ -31,6 +32,7 @@ interface Step {
 
 const Index = () => {
   const [isEnglish, setIsEnglish] = useState(false);
+  const [showWizard, setShowWizard] = useState(false);
   const [steps, setSteps] = useState<Step[]>([
     {
       id: 1,
@@ -553,6 +555,15 @@ const Index = () => {
     }));
   };
 
+  const handleSubmit = () => {
+    const selectedSteps = steps.filter(step => step.isSelected);
+    if (selectedSteps.length === 0) {
+      alert(isEnglish ? "Please select at least one item" : "Veuillez sélectionner au moins un élément");
+      return;
+    }
+    setShowWizard(true);
+  };
+
   return (
     <div className="min-h-screen bg-white p-6 md:p-12 animate-fade-in">
       <div className="max-w-4xl mx-auto">
@@ -698,11 +709,22 @@ const Index = () => {
             <ArrowLeft className="h-5 w-5" />
             <span>{isEnglish ? "Back" : "Retour"}</span>
           </button>
-          <button className="flex items-center space-x-2 px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors">
+          <button 
+            onClick={handleSubmit}
+            className="flex items-center space-x-2 px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors"
+          >
             <span>{isEnglish ? "Submit request" : "Soumettre la demande"}</span>
             <Send className="h-5 w-5" />
           </button>
         </div>
+
+        {showWizard && (
+          <RecapWizard
+            selectedSteps={steps.filter(step => step.isSelected)}
+            isEnglish={isEnglish}
+            onClose={() => setShowWizard(false)}
+          />
+        )}
       </div>
     </div>
   );
