@@ -2,6 +2,7 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import { ArrowLeft, Printer, Download } from "lucide-react";
 import { useRef } from "react";
+import html2pdf from "html2pdf.js";
 
 const Projects = () => {
   const location = useLocation();
@@ -14,9 +15,17 @@ const Projects = () => {
   };
 
   const handleDownloadPDF = () => {
-    // In a real application, you would implement PDF generation here
-    // For now, we'll just show an alert
-    alert(isEnglish ? "PDF download will be implemented" : "Le téléchargement PDF sera implémenté");
+    if (contentRef.current) {
+      const opt = {
+        margin: [10, 10],
+        filename: isEnglish ? 'project-details.pdf' : 'details-projet.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2 },
+        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+      };
+
+      html2pdf().set(opt).from(contentRef.current).save();
+    }
   };
 
   if (!projectData) {
@@ -88,7 +97,7 @@ const Projects = () => {
             {isEnglish ? "Selected Items" : "Éléments sélectionnés"}
           </h2>
 
-          <div className="space-y-6">
+          <div className="space-y-4">
             {selectedSteps
               .filter(step => step.isSelected)
               .map((step) => (
@@ -97,7 +106,7 @@ const Projects = () => {
                     {isEnglish ? step.titleEn : step.titleFr}
                   </h3>
                   {step.subTasks && (
-                    <ul className="ml-4 mt-2 space-y-2">
+                    <ul className="ml-4 mt-2 space-y-1">
                       {step.subTasks
                         .filter((subTask: any) => subTask.isSelected)
                         .map((subTask: any) => (
@@ -106,7 +115,7 @@ const Projects = () => {
                               {isEnglish ? subTask.titleEn : subTask.titleFr}
                             </p>
                             {subTask.tasks && (
-                              <ul className="ml-4 mt-1">
+                              <ul className="ml-4">
                                 {subTask.tasks
                                   .filter((task: any) => task.isSelected)
                                   .map((task: any) => (
